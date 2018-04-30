@@ -1,12 +1,16 @@
 \documentclass[conference]{IEEEtran}
 \IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage[printonlyused]{acronym}
 \usepackage{graphicx}
 \usepackage{textcomp}
+%\usepackage[backend=bibtex,style=IEEEtr]{biblatex}
+
+
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
@@ -124,7 +128,10 @@ intro
 
 
 \section{Related Work -- Paul}
-
+Refer to articles, how they collected data
+did they use mobile phones or separate acceleration sensor devices
+body placement of the sensor
+The experimental results show that when the sensor is placed on different rigid body, different models are required for certain activities ~\cite{Henpraserttae2011}.
 \subsection{Subsection blabla}
 
 subsection
@@ -279,9 +286,16 @@ ias
 
 TODO Abbreviations
 
-\section*{References}
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{unsrt}
+\bibliography{references}
 asdfiajsd
-\\
+%%%----------------------------------------------------------
+%\MakeBibliography                        				% references
+%%%----------------------------------------------------------
+%\printbibliography
+%\bibliography{references}  	% name of bibliography file (references.bib)
+%\bibliographystyle{ieeetr}
 \\
 \\
 \\
