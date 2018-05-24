@@ -128,29 +128,18 @@ intro
 
 
 \section{Related Work -- Paul}
-blbla
+As activity recognition is a popular topic, there already many studies and papers recording detection of gestures in both natural and laboratory settings as well as using regular mobile accelerometers and multiple high-performant accelerometers attached to different parts of the body.
+Although the use of multiple separate acceleration sensor devices can improve results drastically up to 80\% and more ~\cite{Bao2004}, cell phones are the easiest solution to spread the capability of measuring and classifying movement patterns. 
+The use of smartphone sensors is not only practicable but also allows developing applications at low-cost ~\cite{Brezmes2009}.
+Cell phones however are disadvantageous to the effect that the device tilt is uncertain oftentimes ~\cite{Brezmes2009}. So sensor data for a particular movement patterns may differ from each other significantly. Under that circumstance algorithms therefore are far more complex and their results more inaccurate. As the performance of algorithms and devices have increased, these problems can be dealt with by now. Also wearing the sensor at different body parts is worsening the situation. Therefore a training phase combined with an AI learning algorithm can help to improve detection results ~\cite{Kwapisz2011,Bao2004}.
+While multi-sensor approaches focus on detecting a large set of activities ~\cite{Bao2004}, many studies that make use of just one triaxial smartphone accelerometer are concentrating on a smaller subset like walking, jogging, ascending stairs, descending stairs, sitting and standing which is sufficient for detecting standard activities of most people's everyday lives.
+
 Refer to articles, how they collected data
-did they use mobile phones or separate acceleration sensor devices
 body placement of the sensor
-significant difference of the results with varying orientation of the phone/sensor. As the performance of algorithms and devices have increased, these problems can be dealt with by now. Also wearing the sensor at different body parts is worsening the situation. Therefore a training phase combined with an AI learning algorithm can help to improve detection results.
 Kwapisz2011 ~\cite{Kwapisz2011} however is using orientation of the 3 tri-axial sensor to distinguish between standing and sitting, which is not a real-world scenario for everybody as every individual user might carry the phone in a different way.
-results are more precise with multiple sensors, but cell phones are the easiest solution to spread the capability of measuring and classifying movement patterns
 real-time processing at low cost ~\cite{Brezmes2009}
 The experimental results show that when the sensor is placed on different rigid body, different models are required for certain activities ~\cite{Henpraserttae2011}.
 bla
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
 \\
 \\
 \\
@@ -215,14 +204,16 @@ subsection
 \end{figure}
 
 \newpage
-
 \subsection{Analysis}
 
 TODO some analysis shit
 
 \section{Conclusion -- Paul}
+The use of smartphones for activity recognition is appropriate to achieve a high number of users, however it not the most accurate approach.
+Smart wearable devices are getting more popular, which could allow the use of multiple sensors increasing accuracy of gesture detection. As there is a large variety of such wearables and the majority still owns one single cell smartphone, attaching multiple accelerometers  on different parts of the body generally is not a natural use-case. We think that focusing on a high number of users by concentrating on evaluating just smartphone sensor data is significant, as the goal is to give as many people as possible access to the technology of activity recognition.
+Cell phone accelerometer data still can be enhanced by developing more sophisticated software processing sensor data and learning user behaviours, so that a basic set of gestures like walking, standing or climbing stairs can be detected mainting a low error rate while keeping the number of users at an upper level.
 
-TODO Conclude or smth
+Could be important for the health, aging, monitoring people under medical control
 
 \section*{List of Abbreviations}
 \begin{acronym}[XXXXXXXX]
