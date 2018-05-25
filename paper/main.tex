@@ -73,22 +73,35 @@ A critical point is real-time detection of gestures. Analyzing data beforehand i
 
 As mobile devices nowadays are highly connective and come with additional sensors such as \ac{GPS} sensors, vision sensors, audio sensors, light sensors, temperature sensors or direction sensors ~\cite{Kwapisz2011}, activity recognition offers even more possibilities. The availability of these technologies creates new data mining opportunities ~\cite{Kwapisz2011}.
 
-Energy saving on mobile devices by using different sampling frequencies, for example \ac{GPS} need a lot of power as well sensors \dots
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
+Similar to \ac{GPS} sensors executing gesture detection algorithms and reading accelerometer data is also battery draining for mobile devices. Therefore energy saving on mobile devices is an essential task. An human's lifestyle consists of a sequence moderately-long lasting activities. Saving energy can for example be achieved by using different sampling frequencies. The choice of both accelerometer sampling frequency and the classification features are essential ~\cite{Yan2012}. There are is a set of recommended frequencies for basic activities as shown in the following table:
+
+\begin{table}
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Activity} & \textbf{Smart choice} \\
+\hline
+Stand & 16Hz \\
+\hline
+Walk & 16Hz \\
+\hline
+Sit & 16Hz \\
+\hline
+Downstairs & 16Hz \\
+\hline
+Elevator up & 5Hz \\
+\hline
+Elevator down & 5Hz \\
+\hline
+\end{tabular}
+\caption{Smart choice of sampling frequencies according to Yan et al. ~\cite{Yan2012}.}
+\label{tab:smartFrequencies}
+\end{table}
+
+As stated in table \ref{tab:smartFrequencies} sampling frequencies for many basic activities like standing, walking or sitting are equal. This simplifies things as the sampling frequencies have to be adapted in real-time to always keep the situation optimal.
+The algorithm developed by Yan et al. ~\cite{Yan2012} shows that for users running
+the A3R application on their Android phones savings of 50\% under ideal conditions and overall energy savings of 20-25\% can be achieved.
+
 \subsection{Subsection blabla}
 subsection
 \newpage
