@@ -128,15 +128,26 @@ intro
 
 
 \section{Related Work -- Paul}
-As activity recognition is a popular topic, there already many studies and papers recording detection of gestures in both natural and laboratory settings as well as using regular mobile accelerometers and multiple high-performant accelerometers attached to different parts of the body.
-Although the use of multiple separate acceleration sensor devices can improve results drastically up to 80\% and more ~\cite{Bao2004}, cell phones are the easiest solution to spread the capability of measuring and classifying movement patterns. 
-The use of smartphone sensors is not only practicable but also allows developing applications at low-cost ~\cite{Brezmes2009}.
-Cell phones however are disadvantageous to the effect that the device tilt is uncertain oftentimes ~\cite{Brezmes2009}. So sensor data for a particular movement patterns may differ from each other significantly. Under that circumstance algorithms therefore are far more complex and their results more inaccurate. In one approach for instance the orientation of the 3 tri-axial sensor is used to distinguish between standing and sitting ~\cite{Kwapisz2011}, which is not a real-world scenario for everybody as every individual user might carry the phone in a different way. As the performance of algorithms and devices have increased, the problems of phone orientation can be dealt with by now. Also wearing the sensor at different body parts is worsening the situation. Therefore a training phase combined with an AI learning algorithm can help to improve detection results ~\cite{Kwapisz2011,Bao2004}. Most studies discussing activity recognition with mobile devices usually introduce training phases for collecting sensor data. For example each individual user has a preferred way to hold the phone, like a chest pocket, front trousers pocket, a rear trousers pocket, an inner jacket pocket, \dots ~\cite{Brezmes2009}. This is essential as different sensor placement on the body produce different acceleration data. The experimental results show that when the sensor is placed on different rigid body, different models are required for certain activities ~\cite{Henpraserttae2011}.
-While multi-sensor approaches focus on detecting a large set of activities ~\cite{Bao2004}, many studies that make use of just one triaxial smartphone accelerometer are concentrating on a smaller subset like walking, jogging, ascending stairs, descending stairs, sitting and standing which is sufficient for detecting standard activities of most people's everyday lives.
-A critical point is real-time detection of gestures. Analyzing data beforehand is necessary in order to recognize certain movement patterns. Real-time capability of systems can be essential for detecting running in a sports and health application or even monitoring aged people or anyone under medical control ~\cite{Brezmes2009}. Today's mobile devices have enough computing power to collect and detect for example a fall which as a emergency requires fast reaction. The solution of handling calculations on the mobile device is also highly scalable as no additional server is necessary for data processing ~\cite{Kwapisz2011}.
-As mobile devices nowadays are highly connective and come with additional sensors such as GPS sensors, vision sensors, audio sensors, light sensors, temperature sensors or direction sensors ~\cite{Kwapisz2011}, activity recognition offers even more possibilities. The availability of these technologies creates new data mining opportunities ~\cite{Kwapisz2011}.
+As activity recognition - especially \ac{HAR} - is a popular topic, there already many studies and papers recording detection of gestures in both natural and laboratory settings as well as using regular mobile accelerometers and multiple high-performant accelerometers attached to different parts of the body.
 
-Energy saving on mobile devices by using different sampling frequencies \dots
+Although the use of multiple separate acceleration sensor devices can improve results drastically up to 80\% and more ~\cite{Bao2004}, cell phones are the easiest solution to spread the capability of measuring and classifying movement patterns.
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\linewidth]{multiple_accelerometers}
+\caption{As noted by Bao and Intille ~\cite{Bao2004} this picture shows the use of five accelerometers placed on the described body parts. Multiple accelerometers allow more accurate detection but is also complex and only suitable in laboratory conditions when compared to mobile device accelerometers.}
+\label{fig:multipleAccelerometers}
+\end{figure}
+The use of smartphone sensors is not only practicable but also allows developing applications at low-cost ~\cite{Brezmes2009}.
+
+Cell phones however are disadvantageous to the effect that the device tilt is uncertain oftentimes ~\cite{Brezmes2009}. So sensor data for a particular movement patterns may differ from each other significantly. Under that circumstance algorithms therefore are far more complex and their results more inaccurate. In one approach for instance the orientation of the tri-axial sensor is used to distinguish between standing and sitting ~\cite{Kwapisz2011}, which is not a real-world scenario for everybody as every individual user might carry the phone in a different way. As the performance of algorithms and devices have increased, the problems of phone orientation can be dealt with by now. Also wearing the sensor at different body parts is worsening the situation. Therefore a training phase combined with an \ac{AI} learning algorithm can help to improve detection results ~\cite{Kwapisz2011,Bao2004}. Most studies discussing activity recognition with mobile devices usually introduce training phases for collecting sensor data. For example each individual user has a preferred way to hold the phone, like a chest pocket, front trousers pocket, a rear trousers pocket, an inner jacket pocket, \dots ~\cite{Brezmes2009}. This is essential as different sensor placement on the body produce different acceleration data. The experimental results show that when the sensor is placed on different rigid body, different models are required for certain activities ~\cite{Henpraserttae2011}.
+
+While multi-sensor approaches focus on detecting a large set of activities ~\cite{Bao2004}, many studies that make use of just one triaxial smartphone accelerometer are concentrating on a smaller subset like walking, jogging, ascending stairs, descending stairs, sitting and standing which is sufficient for detecting standard activities of most people's everyday lives.
+
+A critical point is real-time detection of gestures. Analyzing data beforehand is necessary in order to recognize certain movement patterns. Real-time capability of systems can be essential for detecting running in a sports and health application or even monitoring aged people or anyone under medical control ~\cite{Brezmes2009}. Today's mobile devices have enough computing power to collect and detect for example a fall which as a emergency requires fast reaction. The solution of handling calculations on the mobile device is also highly scalable as no additional server is necessary for data processing ~\cite{Kwapisz2011}.
+
+As mobile devices nowadays are highly connective and come with additional sensors such as \ac{GPS} sensors, vision sensors, audio sensors, light sensors, temperature sensors or direction sensors ~\cite{Kwapisz2011}, activity recognition offers even more possibilities. The availability of these technologies creates new data mining opportunities ~\cite{Kwapisz2011}.
+
+Energy saving on mobile devices by using different sampling frequencies, for example \ac{GPS} need a lot of power as well sensors \dots
 \\
 \\
 \\
@@ -204,67 +215,18 @@ Could be important for the health, aging, monitoring people under medical contro
 
 \section*{List of Abbreviations}
 \begin{acronym}[XXXXXXXX]
- \acro{HAR}{Human Activity Recognition}
  \acro{AI}{Artificial Intelligence}
+ \acro{GPS}{Global Positioning System}
+ \acro{HAR}{Human Activity Recognition} 
 \end{acronym}
-ias
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-
-TODO Abbreviations
 
 \addcontentsline{toc}{section}{References}
 \bibliographystyle{unsrt}
 \bibliography{references}
-asdfiajsd
 %%%----------------------------------------------------------
 %\MakeBibliography                        				% references
 %%%----------------------------------------------------------
 %\printbibliography
 %\bibliography{references}  	% name of bibliography file (references.bib)
 %\bibliographystyle{ieeetr}
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-TODO Refs
-
-
-
 \end{document}
