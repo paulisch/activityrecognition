@@ -71,6 +71,29 @@ While multi-sensor approaches focus on detecting a large set of activities ~\cit
 
 A critical point is real-time detection of gestures. Analyzing data beforehand is necessary in order to recognize certain movement patterns. Real-time capability of systems can be essential for detecting running in a sports and health application or even monitoring aged people or anyone under medical control ~\cite{Brezmes2009}. Today's mobile devices have enough computing power to collect and detect for example a fall which as a emergency requires fast reaction. The solution of handling calculations on the mobile device is also highly scalable as no additional server is necessary for data processing ~\cite{Kwapisz2011}.
 
+Concerning feature extraction different configurations chosen in the particular studies. Ravi et al. ~\cite{Ravi2005} for instance collected data for a window size of about 5.12 seconds using a sampling frequency of 50Hz while Kwapisz et al. ~\cite{Kwapisz2011} divided the data into segments of 10 seconds at sampling frequency of just 20Hz. Although the settings vary from each other the extracted features almost always are similar ~\cite{Ravi2005}. Typical features are
+\begin{itemize}
+\item mean
+\item standard deviation
+\item energy
+\item correlation.
+\end{itemize}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\linewidth]{different_activities}
+\caption{A graph by Ravi et al. ~\cite{Ravi2005} showing the X-axis readings for different activities}
+\label{fig:differentActivities}
+\end{figure}
+Like figure \ref{fig:differentActivities} is suggesting activities all have a certain pattern. Of course these patterns can be distinguished from each other as this is a basic requirement for detecting different activities. Therefore activities are mapped to classes, which requires classification techniques. A common toolkit for classification is the Weka toolkit that was called into action in many existing studies. Also different algorithms of this toolkit are compared as their performance as well as accuracy differs. Common algorithms are ~\cite{Ravi2005}
+\begin{itemize}
+\item decision tables
+\item decision trees
+\item k-nearest neighbors
+\item \ac{SVM}
+\item naive bayes.
+\end{itemize}
+
 As mobile devices nowadays are highly connective and come with additional sensors such as \ac{GPS} sensors, vision sensors, audio sensors, light sensors, temperature sensors or direction sensors ~\cite{Kwapisz2011}, activity recognition offers even more possibilities. The availability of these technologies creates new data mining opportunities ~\cite{Kwapisz2011}.
 
 Similar to \ac{GPS} sensors executing gesture detection algorithms and reading accelerometer data is also battery draining for mobile devices. Therefore energy saving on mobile devices is an essential task. An human's lifestyle consists of a sequence moderately-long lasting activities. Saving energy can for example be achieved by using different sampling frequencies. The choice of both accelerometer sampling frequency and the classification features are essential ~\cite{Yan2012}. There are is a set of recommended frequencies for basic activities as shown in the following table:
@@ -156,7 +179,8 @@ Could be important for the health, aging, monitoring people under medical contro
 \begin{acronym}[XXXXXXXX]
  \acro{AI}{Artificial Intelligence}
  \acro{GPS}{Global Positioning System}
- \acro{HAR}{Human Activity Recognition} 
+ \acro{HAR}{Human Activity Recognition}
+ \acro{SVM}{Support Vector Machines}
 \end{acronym}
 
 \addcontentsline{toc}{section}{References}
