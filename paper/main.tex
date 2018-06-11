@@ -41,20 +41,27 @@ roman.socovka@students.fh-hagenberg.at}
 \maketitle
 
 \begin{abstract}
-This document is a discussion on the topic activity recognition focusing on \ac{HAR} using mobile device accelerometers. Existing studies and papers are therefore examined and the different approaches of data collecting and processing are illustrated. For this work no separate experiments were carried out. However advantages and disadvantages of existing studies like activity recognition using a single tri-axial accelerator or using a set of multiple accelerators placed on different parts of the body are compared. What's more also current as well as future possibilities of \ac{HAR} concerning the health and sports sector are reflected. As pattern detection of different human gestures is a complex task, we concentrate on just on some main activities like walking, jogging, sitting, standing, ascending stairs and descending stairs. The goal is to point out aspects that apply to the majority of world's population and their most common everyday activities. Furthermore gesture detection involves processing power which is limited on mobile devices and also battery draining. Methods like configuring sampling rate in this way help saving power and optimizing the activity recognition task.
-\color{red}{*CRITICAL: Do Not Use Symbols, Special Characters, Footnotes, 
-or Math in Paper Title or Abstract.}
+This document is a discussion on the topic activity recognition focusing on \ac{HAR} using mobile device accelerometers. Existing studies and papers are therefore examined and the different approaches of data collecting and processing are illustrated. For this work no separate experiments were carried out. However advantages and disadvantages of existing studies like activity recognition using a single tri-axial accelerator or using a set of multiple accelerators placed on different parts of the body are compared. Furthermore current as well as future possibilities of \ac{HAR} concerning the health and sports sector are reflected. As pattern detection of different human gestures is a complex task, we concentrate just on some main activities like walking, jogging, sitting, standing, ascending stairs and descending stairs. The goal is to point out aspects that apply to the majority of world's population and their most common everyday activities. Furthermore gesture detection involves processing power which is limited on mobile devices and also battery draining. Methods like configuring sampling rate help saving power and optimizing the activity recognition task.
 \end{abstract}
 
 \begin{IEEEkeywords}
 Human Activity Recognition, accelerometer, movement pattern detection
 \end{IEEEkeywords}
 
-\section{Introduction -- Simon}
-Epic intro
+\section{Introduction}
+Human Activity Recoginition tries to harness the data of acceleration sensors in order to conclude the current activity of the user. The challenge is to get clearly distinguishable datasets for daily activities by using the cheapest and easiest method to acquire the data.
+One of the cheapeast methods is to use the sensors already built into todays mobile devices, instead of using different acceleremeters attached to the body. Additionally the mobile devices nowadays are shipped with several more sensors like audio sensors, vision sensors, location sensors, temperature sensors or direction sensors ~\cite{Kwapisz2011}. The combination of these different sensors can lead to different new use-cases to apply this data on, creating new opportunities for developers and users. Opportunities for applications to get even more ubiquous than they already are and therefore to improve life quality of the user.
+\newpage
+\subsection{The Activity Recoginition Process}
+As Su et al. lined out in their work, the process of recognizing an activity is typically seperated into training and testing. For training, data is collected for each activitiy and out of this data a classification model is created. When testing data is received, the classification model is used to identify the activity and hopefully recognize the correct activity. This process is applied in most of the works related to activity recognition.
+\begin{figure}[!htb]
+\includegraphics[width=\linewidth]{recognition_process}
+  \caption{A typical process for activity recognition with smartphone sensors by Su et al. ~\cite{Su2014} }
+  \label{fig:recognition_process}
+\end{figure}
 
-\section{Related Work -- Paul}
-As activity recognition - especially \ac{HAR} - is a popular topic, there already many studies and papers recording detection of gestures in both natural and laboratory settings as well as using regular mobile accelerometers and multiple high-performant accelerometers attached to different parts of the body.
+\section{Related Work}
+As activity recognition - especially \ac{HAR} - is a popular topic, there already many studies and papers recording detection of gestures in both natural and laboratory settings as well as using regular mobile accelerometers and multiple high-performance accelerometers attached to different parts of the body.
 
 Although the use of multiple separate acceleration sensor devices can improve results drastically up to 80\% and more ~\cite{Bao2004}, cell phones are the easiest solution to spread the capability of measuring and classifying movement patterns.
 \begin{figure}[!htb]
@@ -65,7 +72,7 @@ Although the use of multiple separate acceleration sensor devices can improve re
 \end{figure}
 The use of smartphone sensors is not only practicable but also allows developing applications at low-cost ~\cite{Brezmes2009}.
 
-Cell phones however are disadvantageous to the effect that the device tilt is uncertain oftentimes ~\cite{Brezmes2009}. So sensor data for a particular movement patterns may differ from each other significantly. Under that circumstance algorithms therefore are far more complex and their results more inaccurate. In one approach for instance the orientation of the tri-axial sensor is used to distinguish between standing and sitting ~\cite{Kwapisz2011}, which is not a real-world scenario for everybody as every individual user might carry the phone in a different way. As the performance of algorithms and devices have increased, the problems of phone orientation can be dealt with by now. Also wearing the sensor at different body parts is worsening the situation. Therefore a training phase combined with an \ac{AI} learning algorithm can help to improve detection results ~\cite{Kwapisz2011,Bao2004}. Most studies discussing activity recognition with mobile devices usually introduce training phases for collecting sensor data. For example each individual user has a preferred way to hold the phone, like a chest pocket, front trousers pocket, a rear trousers pocket, an inner jacket pocket, \dots ~\cite{Brezmes2009}. This is essential as different sensor placement on the body produce different acceleration data. The experimental results show that when the sensor is placed on different rigid body, different models are required for certain activities ~\cite{Henpraserttae2011}.
+Cell phones however are disadvantageous to the effect that the device tilt is uncertain oftentimes ~\cite{Brezmes2009}. So sensor data for particular movement patterns may differ from each other significantly. Under that circumstance algorithms therefore are far more complex and their results more inaccurate. In one approach for instance the orientation of the tri-axial sensor is used to distinguish between standing and sitting ~\cite{Kwapisz2011}, which is not a real-world scenario for everybody as every individual user might carry the phone in a different way. As the performance of algorithms and devices have increased, the problems of phone orientation can be dealt with by now. Also wearing the sensor at different body parts is worsening the situation. Therefore a training phase combined with an \ac{AI} learning algorithm can help to improve detection results ~\cite{Kwapisz2011,Bao2004}. Most studies discussing activity recognition with mobile devices usually introduce training phases for collecting sensor data. For example each individual user has a preferred way to hold the phone, like a chest pocket, front trousers pocket, a rear trousers pocket, an inner jacket pocket, \dots ~\cite{Brezmes2009}. This is essential as different sensor placement on the body produce different acceleration data. The experimental results show that when the sensor is placed on different rigid body, different models are required for certain activities ~\cite{Henpraserttae2011}.
 
 While multi-sensor approaches focus on detecting a large set of activities ~\cite{Bao2004}, many studies that make use of just one triaxial smartphone accelerometer are concentrating on a smaller subset like walking, jogging, ascending stairs, descending stairs, sitting and standing which is sufficient for detecting standard activities of most people's everyday lives.
 
@@ -98,7 +105,7 @@ As mobile devices nowadays are highly connective and come with additional sensor
 
 Similar to \ac{GPS} sensors executing gesture detection algorithms and reading accelerometer data is also battery draining for mobile devices. Therefore energy saving on mobile devices is an essential task. An human's lifestyle consists of a sequence moderately-long lasting activities. Saving energy can for example be achieved by using different sampling frequencies. The choice of both accelerometer sampling frequency and the classification features are essential ~\cite{Yan2012}. There are is a set of recommended frequencies for basic activities as shown in the following table:
 
-\begin{table}
+\begin{table}[!htb]
 \centering
 \begin{tabular}{|c|c|}
 \hline
@@ -125,49 +132,68 @@ As stated in table \ref{tab:smartFrequencies} sampling frequencies for many basi
 The algorithm developed by Yan et al. ~\cite{Yan2012} shows that for users running
 the A3R application on their Android phones savings of 50\% under ideal conditions and overall energy savings of 20-25\% can be achieved.
 
-\subsection{Subsection blabla}
-subsection
-\newpage
-\section{Evaluation -- Simon}
 
-\subsection{Results}
+\section{Evaluation}
+Different papers discussed in the Related Works Section come to different Results depending mostly on the type of used sensors. Following sections will firstly show the results of cell phone accelerometers and secondly the results of a tri-axial accelerometer attached to the body.
+
+\subsection{Cell phone accellerometers}
+By using the acellerometer of a cell phone Kwapisz et al. came to following accuracies displayed in figure \ref{fig:accurracies_cell_phone}. As the graphic shows, the normal rate of recognition is over 90 percent for jogging, walking, sitting and standing. For going downstairs or upstairs on the other hand, the recognition tops at approximately 60 percent.
 \begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{accurracies_cell_phone.png}
+  \caption{Accuracies of Activity Recoginition using cell phone acellerometers by Kwapisz et al. ~\cite{Kwapisz2011} }
+  \label{fig:accurracies_cell_phone}
+\end{figure}
+\newpage
+\subsection{Tri-axial accellerometers}
+In contrast to the results with cell phone sensors Ravi et al. came to following results displayed in figure \ref{fig:tri_axial_data}  by using a tri-axial accelerometer attached to the body.
+The confusion matrix shows the activity which was recognized when a certain activity has been done. There are some pretty accurate recognitions for standing, walking and going downstairs with nearly 100 percent recognition rate in each. Running and going upstairs contrarily don't have acurrate recognitions at all.
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{tri_axial_data.png}
+  \caption{Confusion Matrix for identified activities  by Ravi et al. ~\cite{Ravi2005} }
+  \label{fig:tri_axial_data}
+\end{figure}
+
+\subsection{Comparison of cell phone and tri-axial accelerometer}
+
+Comparing figure \ref{fig:accurracies_cell_phone} and \ref{fig:tri_axial_data} some key differences and similarities can be observed. Firstly, there is a correlation between the bad results of the activity "Upstairs". Using cell phone sensors, these bad results come from the similarities to going downstairs. On the contrary the bad results using tri-axial sensors attached to the body confuse going upstairs with running.
+One more thing that can be noticed is that "Walking" and "Standing" both have nearly perfect recognition values for both types of sensors.
+\\
+\section{Accelleration Plots for daily activities}
+As pointed out previously there are several activities that can not easily be distinguished. Below you can see the accelerometer profiles for some basic activities captured by Kwapisz et al. ~\cite{Kwapisz2011}. 
+The problems with wrongly recognized activities stems from the similarities in their acceleromerter profiles. For instance figures \ref{fig:ascendingStairs} and \ref{fig:descendingStairs} show strong similarities, which leads to the problem of wrong activity recognition. In contrast figures \ref{fig:walking}, \ref{fig:standing} and \ref {fig:sitting} show distinctive differences and therefore can be recognized much more accurate.\newpage
+\begin{figure}[!p]
   \includegraphics[width=\linewidth]{walking.png}
-  \caption{Walking}
+  \caption{Walking plot by Kwapisz et al. ~\cite{Kwapisz2011} }
   \label{fig:walking}
 \end{figure}
-\begin{figure}[!htb]
-  \includegraphics[width=\linewidth]{jogging.png}
-  \caption{Jogging}
-  \label{fig:jogging}
-\end{figure}
-\begin{figure}[!htb]
+\begin{figure}[!p]
   \includegraphics[width=\linewidth]{sitting.png}
-  \caption{Sitting}
+  \caption{Sitting plot by Kwapisz et al. ~\cite{Kwapisz2011}}
   \label{fig:sitting}
 \end{figure}
-\begin{figure}[!htb]
+\begin{figure}[!p]
   \includegraphics[width=\linewidth]{standing.png}
-  \caption{Standing}
+  \caption{Standing plot by Kwapisz et al. ~\cite{Kwapisz2011}}
   \label{fig:standing}
 \end{figure}
-\begin{figure}[!htb]
+\begin{figure}[!p]
+  \includegraphics[width=\linewidth]{jogging.png}
+  \caption{Jogging plot by Kwapisz et al. ~\cite{Kwapisz2011}}
+  \label{fig:jogging}
+\end{figure}
+\begin{figure}[!p]
   \includegraphics[width=\linewidth]{ascending_stairs.png}
-  \caption{Ascending Stairs}
+  \caption{Ascending Stairs plot by Kwapisz et al. ~\cite{Kwapisz2011}}
   \label{fig:ascendingStairs}
 \end{figure}
-\begin{figure}[!htb]
+\begin{figure}[!p]
   \includegraphics[width=\linewidth]{descending_stairs.png}
-  \caption{Descending Stairs}
+  \caption{Descending Stairs plot by Kwapisz et al. ~\cite{Kwapisz2011}}
   \label{fig:descendingStairs}
 \end{figure}
+\clearpage
 
-\newpage
-\subsection{Analysis}
-
-TODO some analysis shit
-
-\section{Conclusion -- Paul}
+\section{Conclusion}
 The use of smartphones for activity recognition is appropriate to achieve a high number of users, however it not the most accurate approach.
 Smart wearable devices are getting more popular, which could allow the use of multiple sensors increasing accuracy of gesture detection. As there is a large variety of such wearables and the majority still owns one single cell smartphone, attaching multiple accelerometers  on different parts of the body generally is not a natural use-case. We think that focusing on a high number of users by concentrating on evaluating just smartphone sensor data is significant, as the goal is to give as many people as possible access to the technology of activity recognition.
 Cell phone accelerometer data still can be enhanced by developing more sophisticated software processing sensor data and learning user behaviors, so that a basic set of gestures like walking, standing or climbing stairs can be detected maintaining a low error rate while keeping the number of users at an upper level.
